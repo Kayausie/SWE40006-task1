@@ -29,7 +29,12 @@
 			<Component Id="WindowsFormsApp1" Guid="16cd1363-dfae-4347-b483-0a4031dce6b3">
 				<File Id="WindowsFormsApp1" Source="$(var.WindowsFormsApp1.TargetDir)WindowsFormsApp1.exe" KeyPath="yes" />
 			</Component>
-			
+			<Component Id="Adder" Guid="f6ad55d8-2cec-4215-b4d5-8f93bc9c5f08">
+				<File Id="Adder" Source="$(var.WindowsFormsApp1.TargetDir)AdderLibrary.dll" KeyPath="yes" />
+			</Component>
+			<Component Id="Subtractor" Guid="f62f36ab-9a4a-49df-9790-8a2510ae0341">
+				<File Id="Subtractor" Source="$(var.WindowsFormsApp1.TargetDir)SubtractorLibrary.dll" KeyPath="yes" />
+			</Component>
 		</ComponentGroup>
 	</Fragment>
 </Wix>

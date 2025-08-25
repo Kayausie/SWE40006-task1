@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdderLibrary\AdderLibrary.csproj">
+      <Project>{add57420-cf6a-4234-b41b-92b842c9914b}</Project>
+      <Name>AdderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SubtractorLibrary\SubtractorLibrary.csproj">
+      <Project>{699126cd-9889-4e86-8857-dc03b6cea029}</Project>
+      <Name>SubtractorLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

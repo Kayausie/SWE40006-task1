@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AdderLibrary;
+using SubtractorLibrary;
 
 namespace WindowsFormsApp1
 {
@@ -37,13 +38,13 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            counter++;
+            counter=AdderLibrary.Adder.Add(counter);
             label1.Text = counter.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            counter--;
+            counter=SubtractorLibrary.Subtractor.Subtract(counter);
             label1.Text = counter.ToString();
         }
     }
