@@ -23,5 +23,28 @@ namespace WindowsFormsApp1
             MessageBox.Show("Hello, World!");
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        int counter = 0;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            counter++;
+            label1.Text = counter.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            counter--;
+            label1.Text = counter.ToString();
+        }
     }
 }

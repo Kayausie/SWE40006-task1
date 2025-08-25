@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Product
 	  Id="*"
-	  Name="HelloWorldApp"
+	  Name="CountingApp"
 	  Language="1033"
 	  Version="1.0.0.0"
 	  Manufacturer="Minh Khanh Huynh"
@@ -12,14 +12,14 @@
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate EmbedCab="yes" />
-		<Feature Id="ProductFeature" Title="HelloWorldApp Feature" Level="1">
+		<Feature Id="ProductFeature" Title="CountingApp Feature" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
 	</Product>
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="HelloInstaller" />
+				<Directory Id="INSTALLFOLDER" Name="CountingInstaller" />
 			</Directory>
 		</Directory>
 	</Fragment>
