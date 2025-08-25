@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product
+	  Id="*"
+	  Name="HelloWorldApp"
+	  Language="1033"
+	  Version="1.0.0.0"
+	  Manufacturer="Minh Khanh Huynh"
+	  UpgradeCode="ab33a0b4-af8d-4931-a4a8-a85e6a273fc0">
+
+		<Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+		<Feature Id="ProductFeature" Title="HelloWorldApp Feature" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="HelloInstaller" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Id="WindowsFormsApp1" Guid="16cd1363-dfae-4347-b483-0a4031dce6b3">
+				<File Id="WindowsFormsApp1" Source="$(var.WindowsFormsApp1.TargetDir)WindowsFormsApp1.exe" KeyPath="yes" />
+			</Component>
+			
+		</ComponentGroup>
+	</Fragment>
+</Wix>
